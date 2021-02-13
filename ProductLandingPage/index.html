@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Product Landing Page</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header id="header">
+            <!---logo--->
+            <div class="logo">
+                <img
+                    id="header-img"
+                    src="http://pngimg.com/uploads/electric_car/electric_car_PNG58.png"
+                    alt="logo green car"
+                />
+                <h1>Electric Cars</h1>
+            </div>
+            <nav id="nav-bar">
+                <ul>
+                    <li class="nav-link">Features</li>
+                    <li class="nav-link">How it Works</li>
+                    <li class="nav-link">Pricing</li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="hero-section">
+                <h2>The Best Electric Cars</h2>
+                <form action="https://www.freecodecamp.com/email-submit">
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="elon@tesla.com"
+                        required
+                    />
+                    <input
+                        type="submit"
+                        class="btn"
+                        id="submit"
+                        disabled="disabled"
+                        value="Get Started"
+                    />
+                </form>
+            </div>
+
+            <section class="models">
+                <img
+                    class="icon"
+                    src="https://img.icons8.com/pastel-glyph/64/000000/car--v1.png"
+                />
+
+                <div class="model">
+                    <h3 class="description-titles">Model 3</h3>
+                    <p class="description-text">
+                        Safety is the most important part of the overall Model 3
+                        design. The metal structure is a combination of aluminum and
+                        steel, for maximum strength in every area. In a roof-crush
+                        test, Model 3 resisted four times its own mass, even with an
+                        all-glass roof: that's the same weight as two full-grown
+                        African elephants.
+                    </p>
+                </div>
+                <img
+                    class="icon"
+                    src="https://img.icons8.com/pastel-glyph/64/000000/car--v1.png"
+                />
+
+                <div class="model">
+                    <h3 class="description-titles">Model S</h3>
+                    <p class="description-text">
+                        Up to 10 teraflops of processing power enables in-car gaming
+                        on-par with today’s newest consoles. Wireless controller
+                        compatibility lets you game from any seat.
+                    </p>
+                </div>
+                <img
+                    class="icon"
+                    src="https://img.icons8.com/pastel-glyph/64/000000/car--v1.png"
+                />
+
+                <div class="model">
+                    <h3 class="description-titles">Model X</h3>
+                    <p class="description-text">
+                        Up to 10 teraflops of processing power enables in-car gaming
+                        on-par with today’s newest consoles. Wireless controller
+                        compatibility lets you game from any seat.
+                    </p>
+                </div>
+            </section>
+
+            <iframe
+                id="video"
+                src="https://www.youtube.com/embed/tw4jkyfY4HE"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+
+            <section class="cars-price">
+                <div class="car">
+                    <h2 class="car-price-title">Model 3</h2>
+                    <div class="container-card">
+                        <strong class="price-tag">$60000</strong>
+                        <p class="car-price-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Qui cumque aspernatur quo quis et illum corrupti dolorum
+                            culpa molestiae labore.
+                        </p>
+                        <button class="btn btn-select">select</button>
+                    </div>
+                </div>
+                <div class="car">
+                    <h2 class="car-price-title">Model X</h2>
+                    <div class="container-card">
+                        <strong class="price-tag">$60000</strong>
+                        <p class="car-price-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Qui cumque aspernatur quo quis et illum corrupti dolorum
+                            culpa molestiae labore.
+                        </p>
+                        <button class="btn btn-select">select</button>
+                    </div>
+                </div>
+                <div class="car">
+                    <h2 class="car-price-title">Model S</h2>
+                    <div class="container-card">
+                        <strong class="price-tag">$60000</strong>
+                        <p class="car-price-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Qui cumque aspernatur quo quis et illum corrupti dolorum
+                            culpa molestiae labore.
+                        </p>
+                        <button class="btn btn-select">select</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

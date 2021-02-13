@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+main {
+    margin-top: 10em;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+iframe {
+    margin-top: 2em;
+    min-height: 200px;
+}
+
+#header-img {
+    width: 35px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline;
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-bottom: 0.5em;
+}
+
+#header {
+    padding-top: 2em;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+#nav-bar ul {
+    font-size: 1.15rem;
+    text-align: center;
+    margin: 1em;
+    padding: 0;
+}
+
+.nav-link {
+    margin: 0.3em;
+    list-style: none;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 75%;
+    padding: 0.3em 5px;
+    margin-bottom: 1em;
+    display: block;
+}
+
+.btn {
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    background-color: dodgerblue;
+    width: 50%;
+    padding: 0.5em 3em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.btn:hover,
+.btn:focus {
+    background-color: blue;
+}
+
+.icon {
+    display: none;
+}
+
+.models {
+    margin-top: 3em;
+    text-align: center;
+}
+.model p {
+    margin-top: 0.5em;
+}
+
+.description-titles {
+    margin-bottom: 0;
+}
+
+.cars-price {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.car {
+    margin-top: 1em;
+    border: solid 2px #e6e6e6;
+    width: 75%;
+    border-radius: 5px;
+}
+
+.car-price-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    background-color: #ccc;
+    width: 100%;
+}
+.container-card {
+    text-align: center;
+    padding: 2em;
+}
+
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.btn-select {
+    padding: 0.8em 2em;
+}
