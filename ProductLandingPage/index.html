@@ -29,9 +29,11 @@
             </div>
             <nav id="nav-bar">
                 <ul>
-                    <li class="nav-link">Features</li>
-                    <li class="nav-link">How it Works</li>
-                    <li class="nav-link">Pricing</li>
+                    <a class="nav-link" href="#models">Features</a>
+
+                    <a class="nav-link" href="#video">How it Works</a>
+
+                    <a class="nav-link" href="#pricing">Pricing</a>
                 </ul>
             </nav>
         </header>
@@ -39,7 +41,7 @@
         <main>
             <div class="hero-section">
                 <h2>The Best Electric Cars</h2>
-                <form action="https://www.freecodecamp.com/email-submit">
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
                     <input
                         type="email"
                         name="email"
@@ -51,59 +53,71 @@
                         type="submit"
                         class="btn"
                         id="submit"
-                        disabled="disabled"
                         value="Get Started"
                     />
                 </form>
             </div>
 
-            <section class="models">
-                <img
-                    class="icon"
-                    src="https://img.icons8.com/pastel-glyph/64/000000/car--v1.png"
-                />
+            <section class="models" id="models">
+                <div class="cars-models">
+                    <img
+                        class="icon"
+                        src="https://img.icons8.com/pastel-glyph/64/000000/car--v1.png"
+                    />
 
-                <div class="model">
-                    <h3 class="description-titles">Model 3</h3>
-                    <p class="description-text">
-                        Safety is the most important part of the overall Model 3
-                        design. The metal structure is a combination of aluminum and
-                        steel, for maximum strength in every area. In a roof-crush
-                        test, Model 3 resisted four times its own mass, even with an
-                        all-glass roof: that's the same weight as two full-grown
-                        African elephants.
-                    </p>
+                    <div class="model">
+                        <h3 class="description-titles">Model 3</h3>
+                        <p class="description-text">
+                            Safety is the most important part of the overall Model 3
+                            design. The metal structure is a combination of aluminum
+                            and steel, for maximum strength in every area. In a
+                            roof-crush test, Model 3 resisted four times its own
+                            mass, even with an all-glass roof: that's the same weight
+                            as two full-grown African elephants.
+                        </p>
+                    </div>
                 </div>
-                <img
-                    class="icon"
-                    src="https://img.icons8.com/pastel-glyph/64/000000/car--v1.png"
-                />
+                <div class="cars-models">
+                    <img
+                        class="icon"
+                        src="https://img.icons8.com/pastel-glyph/64/000000/car--v1.png"
+                    />
 
-                <div class="model">
-                    <h3 class="description-titles">Model S</h3>
-                    <p class="description-text">
-                        Up to 10 teraflops of processing power enables in-car gaming
-                        on-par with today’s newest consoles. Wireless controller
-                        compatibility lets you game from any seat.
-                    </p>
+                    <div class="model">
+                        <h3 class="description-titles">Model S</h3>
+                        <p class="description-text">
+                            Safety is the most important part of the overall Model 3
+                            design. The metal structure is a combination of aluminum
+                            and steel, for maximum strength in every area. In a
+                            roof-crush test, Model 3 resisted four times its own
+                            mass, even with an all-glass roof: that's the same weight
+                            as two full-grown African elephants.
+                        </p>
+                    </div>
                 </div>
-                <img
-                    class="icon"
-                    src="https://img.icons8.com/pastel-glyph/64/000000/car--v1.png"
-                />
+                <div class="cars-models">
+                    <img
+                        class="icon"
+                        src="https://img.icons8.com/pastel-glyph/64/000000/car--v1.png"
+                    />
 
-                <div class="model">
-                    <h3 class="description-titles">Model X</h3>
-                    <p class="description-text">
-                        Up to 10 teraflops of processing power enables in-car gaming
-                        on-par with today’s newest consoles. Wireless controller
-                        compatibility lets you game from any seat.
-                    </p>
+                    <div class="model">
+                        <h3 class="description-titles">Model X</h3>
+                        <p class="description-text">
+                            Safety is the most important part of the overall Model 3
+                            design. The metal structure is a combination of aluminum
+                            and steel, for maximum strength in every area. In a
+                            roof-crush test, Model 3 resisted four times its own
+                            mass, even with an all-glass roof: that's the same weight
+                            as two full-grown African elephants.
+                        </p>
+                    </div>
                 </div>
             </section>
 
             <iframe
                 id="video"
+                height="auto"
                 src="https://www.youtube.com/embed/tw4jkyfY4HE"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -123,7 +137,7 @@
                         <button class="btn btn-select">select</button>
                     </div>
                 </div>
-                <div class="car">
+                <div class="car" id="pricing">
                     <h2 class="car-price-title">Model X</h2>
                     <div class="container-card">
                         <strong class="price-tag">$60000</strong>
@@ -149,5 +163,13 @@
                 </div>
             </section>
         </main>
+        <footer>
+            <ul class="footer-list">
+                <li>Privacy</li>
+                <li>Terms</li>
+                <li>Contact</li>
+            </ul>
+            <small>Copyright 2021, Made with 💖 Renzo </small>
+        </footer>
     </body>
 </html>
