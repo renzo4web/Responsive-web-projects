@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2em;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 550px) {
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#drum-machine {
+    border: green 2px solid;
+    padding: 1em;
+    max-width: 400px;
+    width: 100%;
+}
+
+
+@media (min-width: 550px) {
+
+
+    #drum-machine {
+        min-width: 450px;
+        max-width: 700px;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+
+    .controls.flex {
+        border: red 2px solid;
+        flex-direction: column;
+    }
+
+
+}
+
+
+.btns {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 4em;
+
+}
+
+@media (min-width: 550px) {
+
+    .btns {
+        width: 70%;
+        margin-bottom: 0;
+        margin-right: 2em;
+        flex-direction: row;
+    }
+
+}
+
+
+.drum-pad {
+    margin: .3em;
+    padding: 1em 2em;
+    border: green 2px solid;
+    border-radius: .3em;
+    background-color: bisque;
+    cursor: pointer;
+}
+
+.drum-pad:hover, .drum-pad:focus {
+    background-color: green;
+}
+
+@media (min-width: 550px) {
+    .drum-pad {
+        font-size: 1rem;
+        display: inline;
+    }
+}
+
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+@media (min-width: 550px) {
+
+    .controls {
+        width: 35%;
+    }
+}
+
+
+#display {
+    margin: 1em 0;
+    padding: 1.3em 4em;
+    background-color: bisque;
+}
+
+.slider {
+    margin-bottom: 1em;
+}
+
+.bank {
+    margin-bottom: 1em;
+}
+
