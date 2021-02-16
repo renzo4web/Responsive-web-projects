@@ -3,63 +3,97 @@ const powerBtn = document.querySelector('.power');
 const volumeSlider = document.querySelector('.slider');
 const display = document.getElementById('display');
 const btnBank = document.querySelector('.bank');
-let isPower = false;
+let isPower = true;
 let currentBank = bankOne;
 
 const audioElement = document.createElement('audio');
+audioElement.volume = 0;
+
+/* Listeners  */
 
 btnDrumPad.forEach(btn => {
-  btn.addEventListener('click', handleClick);
+  btn.addEventListener('click', handleClickOrKey);
 });
 
-powerBtn.addEventListener('click',
-    () => !isPower ? isPower = true : isPower = false);
+powerBtn.addEventListener('click', () => {
 
-volumeSlider.addEventListener('input', handleVolume);
+  if (!isPower) {
+    isPower = true;
+    powerBtn.textContent = 'ON';
+    return;
+  }
+
+  isPower = false;
+  powerBtn.textContent = 'OFF';
+
+});
+
+// volumeSlider.addEventListener('input', handleVolume);
 
 btnBank.addEventListener('click',
-    () => currentBank === bankOne
-        ? currentBank = bankTwo
-        : currentBank = bankOne);
+    () => {
+      if (currentBank === bankOne) {
+        currentBank = bankTwo;
+        btnBank.textContent = 'Bank 2';
+        return;
+      }
+      currentBank = bankOne;
+      btnBank.textContent = 'Bank 1';
 
-function handleClick(e) {
+    });
 
+document.addEventListener('keydown', handleClickOrKey);
+
+/* Handles  */
+
+function handleClickOrKey(e) {
+  clearStylesBtns();
   if (!isPower) return;
 
   audioElement.classList.add('clip');
-  let drumPad = e.currentTarget;
 
-  let index = currentBank.findIndex(
+  let drumPad;
+  (e.type === 'keydown')
+      // Keypress
+      ? drumPad = searchBtn(e.key.toUpperCase())
+      // Click
+      : drumPad = e.currentTarget;
+
+  const index = currentBank.findIndex(
       x => x.keyTrigger === drumPad.textContent.trim());
-  let sound = currentBank[index];
+
+  const sound = currentBank[index];
 
   audioElement.id = currentBank[index].keyTrigger;
 
-  console.log(currentBank);
-
   drumPad.appendChild(audioElement);
 
-  // audioElement.volume = parseFloat(currentVolume / 100);
+  // Hover effect when is key pressed
+  e.type === 'keydown' ? drumPad.classList.add('key-pressed') : '';
+
   audioElement.src = sound.url;
   audioElement.cloneNode().play();
 
   toScreen(sound.id);
-  console.log('Elment volume: ' + audioElement.volume);
 }
 
 function toScreen(soundName) {
-  display.textContent = soundName;
+  const displayId = document.querySelector('.sound-id');
+  displayId.textContent = soundName;
 }
 
-function handleVolume() {
-  currentVolume = parseFloat(volumeSlider.value);
-  display.textContent = `Volume : ${volumeSlider.value}`;
+function searchBtn(key) {
+  let rndKey = Math.floor(Math.random() * btnDrumPad.length + 1);
+
+  for (let i = 0; i < btnDrumPad.length; i++) {
+    if (key === btnDrumPad[i].textContent.trim()) return btnDrumPad[i];
+  }
+  // If the key pressed not match , a random btn is activated
+  return btnDrumPad[rndKey];
 }
 
-// function changeBankSound() {
-//
-//   if (isBankOne){
-//     currentBank  = bankOne
-//   }
-//
-// }
+function clearStylesBtns() {
+  btnDrumPad.forEach(btn => btn.classList.remove('key-pressed'));
+
+}
+

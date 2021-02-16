@@ -1,8 +1,10 @@
 * {
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
+    font-size: 1rem;
     padding: 2em;
     height: 100vh;
     display: flex;
@@ -17,14 +19,17 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0;
     }
 }
 
 #drum-machine {
-    border: green 2px solid;
-    padding: 1em;
+    border: #55b2f4 8px solid;
+    border-radius: 1em;
     max-width: 400px;
     width: 100%;
+    margin: 1em;
+    padding: 1em;
 }
 
 
@@ -32,6 +37,7 @@ body {
 
 
     #drum-machine {
+        margin: 0;
         min-width: 450px;
         max-width: 700px;
         width: 50%;
@@ -57,7 +63,7 @@ body {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 4em;
+
 
 }
 
@@ -74,16 +80,23 @@ body {
 
 
 .drum-pad {
+    font-weight: 800;
+    background-color: #e6e6e6;
     margin: .3em;
     padding: 1em 2em;
-    border: green 2px solid;
+    border: #0fc3ff 2px solid;
     border-radius: .3em;
-    background-color: bisque;
     cursor: pointer;
 }
 
-.drum-pad:hover, .drum-pad:focus {
-    background-color: green;
+.key-pressed{
+    background-color: red;
+
+}
+
+.drum-pad:active,.drum-pad:hover {
+    background-color: #f9f7f7;
+    outline: none;
 }
 
 @media (min-width: 550px) {
@@ -99,6 +112,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin-top: 2em;
 
 }
 
@@ -106,14 +120,29 @@ body {
 
     .controls {
         width: 35%;
+        margin-top: 0;
+    }
+
+    #display {
+        margin: 1em;
     }
 }
 
 
 #display {
-    margin: 1em 0;
-    padding: 1.3em 4em;
+    border-radius: 1em;
+    margin: 2em 0;
+    width: 100%;
     background-color: bisque;
+    padding: 1.35em;
+    text-align: center;
+}
+
+.sound-id {
+    line-height: 0;
+    vertical-align: middle;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .slider {
@@ -124,3 +153,19 @@ body {
     margin-bottom: 1em;
 }
 
+
+
+.control-btn{
+    font-weight: 800;
+    border-radius: .5em;
+    border: none;
+    padding: .8em 2em;
+    cursor: pointer;
+    background-color: #ffa11f;
+}
+
+
+.control-btn:focus, .control-btn:hover {
+
+    background-color: #f1b863;
+}
