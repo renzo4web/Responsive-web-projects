@@ -1,0 +1,1 @@
+document.querySelector('#welcome-section').scroll(0, 1000)
