@@ -15,16 +15,24 @@ body {
     margin: 0;
     max-height: 100vh;
 }
+img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
 
 h1 {
     margin: 0;
-    border: 2px solid red;
 }
 
 nav {
     padding: 1em 0;
     width: 100%;
-    background-color: #FFFFFF;
+    background: rgb(0,31,84);
+    background: linear-gradient(90deg, rgba(0,31,84,1) 0%, rgba(109,1,178,1) 49%, rgba(0,30,255,1) 100%);
     top: 0;
     left: 0;
     position: fixed;
@@ -37,6 +45,7 @@ nav ul {
 }
 
 nav ul a {
+    color: #FFF;
     height: 100%;
     font-weight: 700;
     text-decoration: none;
@@ -44,7 +53,7 @@ nav ul a {
 }
 
 nav ul a:hover {
-    background-color: yellow;
+    color: #000
 }
 
 
@@ -60,27 +69,34 @@ nav ul a:hover {
     background-color: #001F54;
     position: relative;
     text-align: center;
-    scroll-snap-align: start;
 
 }
+
+
 
 
 #projects {
     display: flex;
     flex-direction: column;
     padding: 2em;
-    scroll-snap-align: start;
-    background-color: #FFEBC6;
+    background-color: indigo;
 }
 
 
 .project-tile {
     margin: 1em;
     max-height: 500px;
-    background-color: red;
     width: 100%;
-    height: 100vh;
-    border-radius: 25px;
+    border-radius: .5rem;
+    overflow: hidden;
+    border: #001F54 solid 1px;
+    box-shadow: #000 1px 2px 15px;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+.project-tile:hover{
+    transform: scale(1.05);
 }
 
 .container-tiles {
@@ -91,26 +107,29 @@ nav ul a:hover {
 }
 
 .project-tile__title {
+    color: #000;
     font-weight: 700;
     text-decoration: none;
-    font-size: 1.5rem;
-    display: block;
+    font-size: 1.2rem;
     margin-top: 0;
-    background-color: yellow;
+    background-color: #FFB627;
     text-align: center;
-    padding: .5em;
+    padding: 1em;
+    display: block;
 }
-
+.project-tile__title:hover,.project-tile__title:focus{
+    color: #ffffff;
+    display: block;
+}
 .projects-title {
+    color: #FFF;
     align-self: center;
     margin-top: 2em;
 }
 
-
 #contact {
     width: 100%;
     color: #FFF;
-    scroll-snap-align: start;
     height: 100vh;
     background-color: darkblue;
     display: flex;
@@ -181,7 +200,6 @@ footer {
 
     h1 {
         margin: 0;
-        border: 2px solid red;
     }
 
     nav {
@@ -206,9 +224,7 @@ footer {
         margin-right: 1em;
     }
 
-    nav ul a:hover {
-        background-color: yellow;
-    }
+
 
 
     #welcome-section {
@@ -254,9 +270,8 @@ footer {
         display: flex;
         flex-direction: column;
         height: 100vh;
-        padding: 2em;
+        padding: 1.5em;
         scroll-snap-align: start;
-        background-color: #FFEBC6;
     }
 
 
@@ -265,6 +280,7 @@ footer {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
+        margin-top: 0;
     }
 
     .project-tile {
@@ -274,12 +290,10 @@ footer {
         background-color: red;
         width: 100%;
         height: 100%;
-        border-radius: 25px;
     }
 
     .project-tile__title {
         margin-top: 0;
-        background-color: yellow;
         text-align: center;
         padding: .5em;
     }
@@ -287,6 +301,7 @@ footer {
     .projects-title {
         align-self: center;
         margin-top: 2em;
+        margin-bottom: 0;
     }
 
 
