@@ -2,7 +2,7 @@
 
 ### Tribute Page
 
-[img](https://res.cloudinary.com/turbopila/image/upload/v1613863443/2021-02-20-19-06-soyrenzo.github.io_obsz6m.pn)
+[!img](https://res.cloudinary.com/turbopila/image/upload/v1613863443/2021-02-20-19-06-soyrenzo.github.io_obsz6m.pn)
 [liveVersion](https://soyrenzo.github.io/TimelineMaradona/)
 
 ### Survey Form
